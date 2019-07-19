@@ -1,0 +1,16 @@
+{
+  "name": "chore-api",
+  "version": "1.0.0",
+  "description": "An API for tracking chores",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Windle",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^5.10.1",
+    "sqlite3": "^4.0.9"
+  }
+}
