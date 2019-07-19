@@ -1,10 +1,8 @@
-const Sequelize = require('sequelize');
+import Sequelize from sequelize;
+import { devDb } from "./settings";
 
 /* Our sequelize connection */
-export const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: 'temp.db'
-});
+export const sequelize = new Sequelize(devDb);
 
 /* Our chore model */
 export const Chore = sequelize.define('chore', {
@@ -15,7 +13,16 @@ export const Chore = sequelize.define('chore', {
     description: {
         type: Sequelize.TEXT,
         allowNull: false
-    }
+    },
+    priority: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    dueDate: {
+        type: Sequelize.DATE,
+        allowNull: false
+    },
+
 });
 
 /** Allow chore.sync to be ran. */
